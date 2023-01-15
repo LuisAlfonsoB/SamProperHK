@@ -1,4 +1,4 @@
-FROM sammax23/heroku:latest
+FROM elricariocco/wiszky:heroku
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
