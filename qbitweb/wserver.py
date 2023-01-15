@@ -7,7 +7,7 @@ from qbitweb.nodes import make_tree
 
 app = Flask(__name__)
 
-aria2 = ariaAPI(ariaClient(host="http://localhost", port=6800, secret=""))
+aria2 = ariaAPI(ariaClient(host="http://0.0.0.0", port=6800, secret=""))
 
 basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     handlers=[FileHandler("botlog.txt"), StreamHandler()],
