@@ -670,7 +670,7 @@ def re_verfiy(paused, resumed, client, hash_id):
         LOGGER.info("Reverification Failed! Correcting stuff...")
         client.auth_log_out()
         sleep(1)
-        client = qbClient(host="localhost", port="8090")
+        client = qbClient(host="http://0.0.0.0", port="8090")
         try:
             client.torrents_file_priority(torrent_hash=hash_id, file_ids=paused, priority=0)
         except NotFound404Error:
@@ -705,7 +705,7 @@ def list_torrent_contents(id_):
         return "<h1>Incorrect pin code</h1>"
 
     if len(id_) > 20:
-        client = qbClient(host="localhost", port="8090")
+        client = qbClient(host="http://0.0.0.0", port="8090")
         res = client.torrents_files(torrent_hash=id_)
         cont = make_tree(res)
         client.auth_log_out()
@@ -735,7 +735,7 @@ def set_priority(id_):
         pause = pause.strip("|")
         resume = resume.strip("|")
 
-        client = qbClient(host="localhost", port="8090")
+        client = qbClient(host="http://0.0.0.0", port="8090")
 
         try:
             client.torrents_file_priority(torrent_hash=id_, file_ids=pause, priority=0)
