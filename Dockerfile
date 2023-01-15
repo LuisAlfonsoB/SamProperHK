@@ -1,4 +1,4 @@
-FROM sammax23/rcmltb
+FROM sammax23/heroku:latest
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
