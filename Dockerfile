@@ -1,4 +1,4 @@
-FROM istareatotherscode2/base_image_rc
+FROM sammax23/rcmltb
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
