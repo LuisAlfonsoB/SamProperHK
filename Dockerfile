@@ -44,7 +44,6 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
-RUN curl https://rclone.org/install.sh | bash
 
 COPY . .
 CMD ["bash","start.sh"]
